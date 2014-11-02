@@ -8,19 +8,24 @@
     <script src="bower_components/angular-route/angular-route.min.js"></script>
   </head>
   <body ng-app="deltron">
+    <header role="banner">
+      <h1>Deltron 3030</h1>
+      <nav role="navigation">
+        <a href="#/lyrics" rel="home">All Lyrics</a>
+      </nav>
+    </header>
 
-    <div ng-view></div>
+    <main role="main" ng-view></main>
 
-    <script type="text/ng-template" id="lyrics-list.html">
-      <div ng-repeat="lyric in lyrics">
-        <a ng-href="#/lyrics/{{ lyric.id }}">
-          {{ lyric.title }}
-        </a>
-      </div>
-    </script>
-    <script type="text/ng-template" id="lyrics-detail.html">
-      <h1>{{ lyric.title }}</h1>
-    </script>
+    <footer role="contentinfo">
+      <small>An interstellar project by <a href="http://www.swashcap.com/" rel="author">Swash Cap</a>. View the <a href="https://github.com/swashcap/deltron-3030">code on GitHub</a>.
+    </footer>
+
     <script src="scripts/app.js"></script>
+    <script src="scripts/lyrics-detail/lyrics-detail-controller.js"></script>
+    <script src="scripts/lyrics-detail/lyrics-detail.js"></script>
+    <script src="scripts/lyrics-list/lyrics-list-controller.js"></script>
+    <script src="scripts/lyrics-list/lyrics-list.js"></script>
+    <script src="scripts/lyrics/lyrics.js"></script>
   </body>
 </html>
