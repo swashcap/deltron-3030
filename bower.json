@@ -1,0 +1,15 @@
+{
+  "name": "deltron-3030",
+  "version": "0.0.0",
+  "authors": [
+    "Cory Reed <swashcap@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "angular": "~1.3.1"
+  },
+  "dependencies": {
+    "angular-route": "~1.3.1"
+  }
+}
