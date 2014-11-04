@@ -4,9 +4,12 @@
   angular.module('deltron')
     .config(['$routeProvider', function ($routeProvider) {
       $routeProvider
-        .when('/lyrics', {
-          templateUrl: 'scripts/lyrics-list/lyrics-list.html',
-          controller: 'LyricsListCtrl'
+        .when('/', {
+          templateUrl: 'scripts/main/main.html',
+          controller: 'MainCtrl'
+        })
+        .otherwise({
+          resolveTo: '/'
         });
     }]);
 }(window.angular));

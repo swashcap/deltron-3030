@@ -1,5 +1,10 @@
 <div ng-repeat="lyric in lyrics">
-  <a ng-href="#/lyrics/{{ lyric.id }}">
-    {{ lyric.title }}
-  </a>
+  <article>
+    <blockquote>
+      {{ lyric.title }}
+    </blockquote>
+    <cite>{{ lyric.song }}</cite>
+
+    <a ng-href="#/lyrics/{{ lyric.id }}">&infin; </a>
+  </article>
 </div>

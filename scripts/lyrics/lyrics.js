@@ -7,16 +7,20 @@
 
       var lyrics = [{
         id: 0,
-        title: 'Lorem'
+        title: 'Lorem',
+        song: 1
       }, {
         id: 1,
-        title: 'Ipsum'
+        title: 'Ipsum',
+        song: 10
       }, {
         id: 2,
-        title: 'Dolor'
+        title: 'Dolor',
+        song: 4
       }, {
         id: 3,
-        title: 'Sit Amet'
+        title: 'Sit Amet',
+        song: 10
       }];
 
       this.index = function () {
@@ -29,6 +33,9 @@
             break;
           }
         }
+      };
+      this.getRandom = function () {
+        return lyrics[Math.floor(Math.random() * lyrics.length)];
       };
     }]);
 }(window.angular));
