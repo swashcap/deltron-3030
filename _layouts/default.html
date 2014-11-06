@@ -1,20 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
   {% include head.html %}
 
-  <body>
+  <body ng-app="deltron">
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
     {% include footer.html %}
 
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/lyrics-detail/lyrics-detail-controller.js"></script>
+    <script src="scripts/lyrics-detail/lyrics-detail.js"></script>
+    <script src="scripts/lyrics-list/lyrics-list-controller.js"></script>
+    <script src="scripts/lyrics-list/lyrics-list.js"></script>
+    <script src="scripts/main/main-controller.js"></script>
+    <script src="scripts/main/main.js"></script>
+    <script src="scripts/lyrics/lyrics.js"></script>
+    <script src="scripts/songs/songs.js"></script>
   </body>
-
 </html>
