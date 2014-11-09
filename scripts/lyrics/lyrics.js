@@ -8,19 +8,19 @@
       var lyrics = [{
         id: 0,
         title: 'Lorem',
-        song: 1
+        trackNumber: 1
       }, {
         id: 1,
         title: 'Ipsum',
-        song: 10
+        trackNumber: 10
       }, {
         id: 2,
         title: 'Dolor',
-        song: 4
+        trackNumber: 4
       }, {
         id: 3,
         title: 'Sit Amet',
-        song: 10
+        trackNumber: 10
       }];
 
       this.index = function () {
@@ -36,6 +36,11 @@
       };
       this.getRandom = function () {
         return lyrics[Math.floor(Math.random() * lyrics.length)];
+      };
+      this.getByTrackNumber = function (trackNumber) {
+        return lyrics.filter(function (lyric) {
+          return lyric.trackNumber == trackNumber;
+        });
       };
     }]);
 }(window.angular));
