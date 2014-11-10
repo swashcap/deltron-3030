@@ -6,15 +6,15 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: 'Archivo Narrow', 'Avenir Next Condensed', 'Arial Narrow', sans-serif;
+$base-font-size:   100%;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$text-color:       #23110d;
+$background-color: #ece010;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -24,26 +24,55 @@ $grey-color-dark:  darken($grey-color, 25%);
 $on-palm:          600px;
 $on-laptop:        800px;
 
-
-
-// Using media queries with like this:
-// @include media-query($palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
+a {
+  color: $text-color;
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+  &:focus,
+  &:hover {
+
+  }
+  &:active {
+
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: $background-color;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+header[role='banner'],
+main,
+footer[role='contentinfo'] {
+  margin-right: auto;
+  margin-left: auto;
+  width: 91%;
+}
+
+@import '_lyric';
+@import '_site-footer';
+@import '_site-header';
+@import '_song';

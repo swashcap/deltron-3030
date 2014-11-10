@@ -1,0 +1,20 @@
+// site-header.scss
+
+.site-header {
+  h1 {
+    font-size: 100%;
+    font-weight: 400;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

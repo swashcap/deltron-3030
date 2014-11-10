@@ -1,0 +1,83 @@
+// _song.scss
+
+.song {
+  background: $text-color;
+  color: #fff;
+  font-size: $small-font-size;
+  line-height: 1.2;
+  max-width: 300px;
+  min-height: 5rem;
+  padding: .5rem .5rem .5rem 5.5rem;
+  position: relative;
+
+  &:hover {
+    .song__links {
+      visibility: visible;
+    }
+  }
+}
+.song__info {
+  // @include clearfix;
+}
+.song__track-number {
+  background-image: url(../img/cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  height: 5rem;
+  left: 0;
+  line-height: 5rem;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 5rem;
+
+  span {
+    display: none;
+  }
+}
+.song__title {
+  font-size: 1rem;
+  line-height: 1.1;
+  margin: 0 0 .25em;
+}
+.song__length {
+  opacity: .5;
+}
+.song__featuring {
+  display: inline;
+  font-style: italic;
+  opacity: .5;
+
+  &:before {
+    content: '|\0020';
+    display: inline;
+    opacity: .5;
+  }
+}
+.song__links {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+
+  a {
+    background: rgba($text-color, .667);
+    color: #fff;
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 5rem;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+  }
+  a:nth-of-type(even) {
+    border-left: thin solid rgba(#fff, .333);
+  }
+}
