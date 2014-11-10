@@ -1,10 +1,8 @@
 <div ng-repeat="lyric in lyrics">
   <article>
-    <blockquote>
-      {{ lyric.title }}
+    <blockquote class="lyric">
+      <p ng-bind-html="lyric.title"></p>
     </blockquote>
-    <cite>{{ lyric.song }}</cite>
-
     <a ng-href="#/lyrics/{{ lyric.id }}">&infin; </a>
   </article>
 </div>

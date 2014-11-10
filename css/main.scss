@@ -64,15 +64,17 @@ html {
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
-header[role='banner'],
-main,
-footer[role='contentinfo'] {
+.wrapper {
+  @include clearfix;
+
   margin-right: auto;
   margin-left: auto;
-  width: 91%;
+  width: 90%;
 }
 
 @import '_lyric';
 @import '_site-footer';
 @import '_site-header';
 @import '_song';
+@import '_songs-list';
+

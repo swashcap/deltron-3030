@@ -1,7 +1,22 @@
 // _site-footer.scss
 
 .site-footer {
+  color: mix($background-color, $text-color);
   text-align: center;
+
+  small {
+    display: block;
+    font-size: $small-font-size;
+  }
+  a {
+    color: inherit;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $text-color;
+    }
+  }
 
   @media (min-width: $on-palm) {
     text-align: right;

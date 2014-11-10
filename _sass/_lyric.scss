@@ -3,4 +3,16 @@
 .lyric {
   margin: 0;
   padding: 0;
+
+  p {
+    font-size: 120%;
+    font-weight: 700;
+
+    @media (min-width: $on-palm) {
+      font-size: 125%;
+    }
+    @media (min-width: $on-laptop) {
+      font-size: 150%;
+    }
+  }
 }

@@ -1,1 +1,5 @@
-<h1>{{ lyric.title }}</h1>
+<blockquote class="lyric">
+  <p ng-bind-html="lyric.title"></p>
+</blockquote>
+
+<div ng-include="'scripts/songs/song.html'"></div>

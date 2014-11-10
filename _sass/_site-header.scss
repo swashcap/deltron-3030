@@ -1,20 +1,43 @@
 // site-header.scss
 
 .site-header {
+  background: $text-color;
+  color: #fff;
+
+  a {
+    color: #fff;
+    display: inline-block;
+    padding: .5em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   h1 {
     font-size: 100%;
-    font-weight: 400;
+    font-weight: 700;
     line-height: inherit;
     margin: 0;
     padding: 0;
 
-    a {
-      text-decoration: none;
+    @media (min-width: $on-palm) {
+      float: left;
     }
   }
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    li {
+      float: left;
+    }
+    a.active {
+      background: $background-color;
+      color: $text-color;
+    }
+
+    @media (min-width: $on-palm) {
+      float: right;
+    }
   }
 }

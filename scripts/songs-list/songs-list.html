@@ -1,16 +1,5 @@
 <ul class="songs-list">
   <li ng-repeat="song in songs">
-    <div class="song">
-      <div class="song__info">
-        <span class="song__track-number"><span>#</span>{{ song.trackNumber }}</span>
-        <h2 class="song__title">{{ song.title }}</h2>
-        <span class="song__length">{{ song.length }}</span>
-        <div ng-if="song.featuring" class="song__featuring"><abbr title="Featuring">Feat.</abbr> {{ song.featuring }}</div>
-      </div>
-      <div class="song__links">
-        <a ng-href="{{ song.link }}" title="Song on YouTube">YouTube</a>
-        <a href="#/songs/{{ song.trackNumber }}" title="Permalink" rel="bookmark">&infin;</a>
-      </div>
-    </div><!-- .song -->
+    <div ng-include="'scripts/songs/song.html'"></div>
   </li>
 </ul>
