@@ -1,12 +1,15 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
-
-    <nav ng-controller="NavCtrl" role="navigation">
+    <a href="{{ site.baseurl }}" class="home-link">
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+    </a>
+    <nav ng-controller="NavCtrl" class="site-navigation" role="navigation">
       <ul>
-        <li><a href="#/" title="Home" rel="home" ng-class="{active: isActive('/')}">Home</a></li>
-        <li><a href="#/lyrics" title="All Lyrics" ng-class="{active: isActive('/lyrics.*')}">All Lyrics</a></li>
-        <li><a href="#/songs" title="All Songs" ng-class="{active: isActive('/songs.*')}">All Songs</a></li>
+        <li><a href="#/" title="Home" rel="home" ng-class="{active: isActive('/')}">Living Quarters</a></li>
+        <li><a href="#/lyrics" title="All Lyrics" ng-class="{active: isActive('/lyrics.*')}">Flow Cannon</a></li>
+        <li><a href="#/songs" title="All Songs" ng-class="{active: isActive('/songs.*')}">Blueprints</a></li>
+        <li><a href="#/about" title="About" ng-class="{active: isActive('/about')}">About</a></li>
       </ul>
     </nav>
   </div><!-- .wrapper -->
