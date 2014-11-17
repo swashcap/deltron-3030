@@ -1,4 +1,4 @@
-<div class="song">
+<div class="song song--with-links">
   <div class="song__info">
     <a href="#/songs/{{ song.trackNumber }}" title="Permalink" rel="bookmark">
       <span class="song__track-number"><span>#</span>{{ song.trackNumber }}</span>
@@ -7,4 +7,9 @@
       <div ng-if="song.featuring" class="song__featuring"><abbr title="Featuring">Feat.</abbr> {{ song.featuring }}</div>
     </a>
   </div>
-</div>
+  <div class="song__links">
+    <a ng-href="{{ song.links.rdio }}" title="Song on Rdio">Rdio</a>
+    <a ng-href="{{ song.links.spotify }}" title="Song on Spotify">Spotify</a>
+    <a ng-href="{{ song.links.youtube }}" title="Song on YouTube">YouTube</a>
+  </div>
+</div><!-- .song -->
