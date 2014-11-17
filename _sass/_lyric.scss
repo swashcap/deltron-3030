@@ -1,17 +1,75 @@
 // _lyric.scss
 
 .lyric {
-  margin: 0;
-  padding: 0;
+  border-bottom: thin solid rgba($text-color, .25);
+  margin: 0 0 .5rem;
+  padding: 0 1rem .5rem 0;
+  position: relative;
 
-  p {
-    font-size: 120%;
-    font-weight: 700;
+  @media (min-width: 1$on-palm) {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
 
-    @media (min-width: $on-palm) {
+  blockquote {
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px $background-color;
+
+    p {
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+}
+.lyric__permalink {
+  color: rgba($text-color, .5);
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  text-decoration: none;
+  top: 0;
+  width: 1rem;
+
+  &:focus,
+  &:hover {
+    color: $text-color;
+  }
+}
+
+// Big lyrics
+.lyric--big {
+  border-bottom: none;
+
+  blockquote {
+    margin-bottom: 2rem;
+
+    p {
+      font-size: 112.5%;
+      line-height: 1.2;
+    }
+  }
+
+  @media (min-width: $on-palm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 7rem;
+
+    blockquote p {
       font-size: 125%;
     }
-    @media (min-width: $on-laptop) {
+    .song {
+      bottom: 2rem;
+      left: 0;
+      position: absolute;
+    }
+  }
+  @media (min-width: $on-laptop) {
+    blockquote p {
       font-size: 150%;
     }
   }

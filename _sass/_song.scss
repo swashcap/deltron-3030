@@ -1,28 +1,29 @@
 // _song.scss
 
 .song {
-  background: $text-color;
-  color: #fff;
+  background: rgba($background-color, .5);
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
   font-size: $small-font-size;
+  justify-content: center;
   line-height: 1.2;
   max-width: 300px;
   min-height: 5rem;
   padding: .5rem .5rem .5rem 5.5rem;
   position: relative;
-
-  &:hover {
-    .song__links {
-      visibility: visible;
-    }
-  }
 }
 .song__info {
-  // @include clearfix;
+  a {
+    display: block;
+    text-decoration: none;
+  }
 }
 .song__track-number {
   background-image: url(../img/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  color: #fff;
   display: block;
   font-size: 3rem;
   font-weight: 700;
@@ -59,26 +60,96 @@
   }
 }
 .song__links {
-  height: 100%;
+  bottom: -2rem;
+  height: 2rem;
   left: 0;
   position: absolute;
-  top: 0;
-  visibility: hidden;
   width: 100%;
 
   a {
-    background: rgba($text-color, .667);
-    border-left: thin solid rgba(#fff, .333);
-    color: #fff;
+    background: rgba($background-color, .5);
+    border-color: rgba($text-color, .25);
+    border-style: solid;
+    border-width: thin thin 0 0;
+    color: rgba($text-color, .75);
     display: block;
     float: left;
     height: 100%;
-    line-height: 5rem;
+    line-height: 2rem;
     text-align: center;
     text-decoration: none;
-    width: 25%;
+    width: 33.33%;
+
+    &:focus,
+    &:hover {
+      color: $text-color;
+    }
   }
-  a:first-child {
-    border-left: none;
+  a:last-child {
+    border-right-width: 0;
+  }
+}
+
+// With links
+.song--with-links {
+  .song__links {
+    opacity: 0;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    transition: opacity 250ms, transform 250ms;
+  }
+
+  &:hover .song__links {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+// Expanded
+.song--expanded {
+  margin-bottom: 3rem;
+
+  @media (min-width: $on-palm) {
+    display: block;
+    font-size: 100%;
+    padding: 0;
+
+    &:before {
+      background: url(../img/cover.jpg) 50% 50% no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      height: 0;
+      padding-bottom: 100%;
+    }
+
+    .song__info {
+      padding: 1rem;
+    }
+    .song__track-number {
+      background: none;
+      font-size: 6rem;
+      height: auto;
+      line-height: 1;
+      padding-top: 34%;
+      width: 100%;
+    }
+    .song__title {
+      font-size: 150%;
+    }
+    .song__links {
+      position: static;
+
+      a {
+        background: none;
+      }
+    }
+  }
+  @media (min-width: $on-laptop) {
+
+  }
+  .song__links {
+
   }
 }

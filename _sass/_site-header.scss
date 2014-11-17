@@ -1,43 +1,42 @@
 // site-header.scss
 
 .site-header {
-  background: $text-color;
-  color: #fff;
+  text-align: center;
 
-  a {
-    color: #fff;
-    display: inline-block;
-    padding: .5em;
+  @media (min-width: $on-palm) {
+    text-align: left;
+  }
+
+  .home-link {
+    display: block;
     text-decoration: none;
-    text-transform: uppercase;
+    padding: .25em 0;
+
+    @media (min-width: $on-palm) {
+      float: left;
+      padding: .25em 0;
+    }
   }
 
   h1 {
+    display: inline;
     font-size: 100%;
     font-weight: 700;
     line-height: inherit;
     margin: 0;
-    padding: 0;
-
-    @media (min-width: $on-palm) {
-      float: left;
-    }
+    text-transform: uppercase;
   }
-  ul {
-    list-style-type: none;
+  p {
+    display: none;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: inherit;
     margin: 0;
-    padding: 0;
+    padding: .25em;
+    opacity: .5;
 
-    li {
-      float: left;
-    }
-    a.active {
-      background: $background-color;
-      color: $text-color;
-    }
-
-    @media (min-width: $on-palm) {
-      float: right;
+    @media (min-width: $on-laptop) {
+      display: inline;
     }
   }
 }

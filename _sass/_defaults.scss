@@ -1,0 +1,38 @@
+// _defaults.scss
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $text-color;
+
+  &:focus,
+  &:hover {
+
+  }
+  &:active {
+
+  }
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+html {
+  background-color: $background-color;
+  background-image: url(../img/deep-field.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}

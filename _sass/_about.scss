@@ -1,0 +1,29 @@
+// _about.scss
+
+.about {
+  @media (min-width: $on-palm) {
+    width: 50%;
+
+  }
+  @media (min-width: $on-laptop) {
+    margin-left: 33.33%;
+    width: 33.33%;
+  }
+
+  .entry-title {
+    font-size: 150%;
+    line-height: 1.2;
+    margin: 0 0 .5em;
+    text-align: center;
+
+    @media (min-width: $on-palm) {
+      text-align: left;
+    }
+  }
+  .entry-content {
+
+  }
+  .entry-footer {
+    display: none;
+  }
+}

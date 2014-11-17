@@ -1,12 +1,5 @@
-<a ng-click="newLyric()">Another one!</a>
+<div class="main">
+  <div ng-include="'scripts/lyrics-detail/lyrics-detail.html'" class="main__content"></div>
 
-<article class="hentry">
-  <div class="entry-content">
-    <blockquote class="lyric">
-      <p ng-bind-html="lyric.title"></p>
-    </blockquote>
-  </div><!-- .entry-content -->
-  <footer>
-    <div ng-include="'scripts/songs/song.html'"></div>
-  </footer>
-</article>
+  <a ng-click="newLyric()" class="button main__toggler">Lube Your Screen</a>
+</div>

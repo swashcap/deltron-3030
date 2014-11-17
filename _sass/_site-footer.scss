@@ -1,7 +1,8 @@
 // _site-footer.scss
 
 .site-footer {
-  color: mix($background-color, $text-color);
+  color: rgba($text-color, .5);
+  padding: .25em 0;
   text-align: center;
 
   small {

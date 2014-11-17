@@ -1,5 +1,10 @@
-<blockquote class="lyric">
-  <p ng-bind-html="lyric.title"></p>
-</blockquote>
-
-<div ng-include="'scripts/songs/song.html'"></div>
+<article class="lyric lyric--big hentry">
+  <div class="entry-content">
+    <blockquote>
+      <p ng-bind-html="lyric.content"></p>
+    </blockquote>
+  </div><!-- .entry-content -->
+  <footer>
+    <div ng-include="'scripts/songs/song-with-links.html'"></div>
+  </footer>
+</article>

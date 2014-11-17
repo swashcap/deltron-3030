@@ -1,8 +1,12 @@
-<div ng-repeat="lyric in lyrics">
-  <article>
-    <blockquote class="lyric">
-      <p ng-bind-html="lyric.title"></p>
-    </blockquote>
-    <a ng-href="#/lyrics/{{ lyric.id }}">&infin; </a>
+<div class="lyrics__list">
+  <article ng-repeat="lyric in lyrics" class="lyric hentry">
+    <div class="entry-content">
+      <blockquote>
+        <p ng-bind-html="lyric.content"></p>
+      </blockquote>
+    </div>
+    <footer>
+      <a ng-href="#/lyrics/{{ lyric.id }}" rel="bookmark" title="Permalink to lyric" class="lyric__permalink">&infin;</a>
+    </footer>
   </article>
 </div>

@@ -1,0 +1,22 @@
+// _animations.scss
+
+.animation {
+  -webkit-transition: all 400ms ease-out;
+          transition: all 400ms ease-out;
+}
+
+.animation.ng-enter-active {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+//.animation.ng-leave.ng-leave-active {
+.animation.ng-enter.ng-enter {
+  opacity: 0;
+}
+
+.animation.ng-leave-active {
+  opacity: 1;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}

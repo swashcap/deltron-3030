@@ -1,0 +1,63 @@
+// _layout.scss
+
+.wrapper {
+  @include clearfix;
+
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
+.site-content {
+  padding-top: 1rem;
+}
+
+@media (min-width: $on-palm) {
+  body {
+    position: relative;
+  }
+  .site-header {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+  }
+  .site-content {
+    -webkit-mask-image:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0,
+        white 4rem,
+        white 50%,
+        rgba(255, 255, 255, 0) 51%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0,
+        white 4rem,
+        white 50%,
+        rgba(255, 255, 255, 0) 51%
+      );
+    height: 100%;
+    overflow: scroll;
+    width: 100%;
+
+    .wrapper {
+      height: 100%;
+    }
+  }
+  .site-footer {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+}
+@media (min-width: $on-laptop) {
+  .site-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}

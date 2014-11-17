@@ -1,0 +1,27 @@
+// _songs-detail.scss
+
+.songs-detail__lyrics {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: $on-palm) {
+  .songs-detail__song,
+  .songs-detail__lyrics {
+    float: left;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    width: 50%;
+  }
+}
+@media (min-width: $on-laptop) {
+  .songs-detail__song {
+    width: 33.33%;
+  }
+  .songs-detail__lyrics {
+    width: 66.67%;
+  }
+}

@@ -1,0 +1,55 @@
+// _site-navigation.scss
+
+.site-navigation {
+  font-size: 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $on-palm) {
+    float: right;
+    text-align: left;
+  }
+
+  a {
+    color: rgba($text-color, .75);
+    font-size: .875rem;
+    display: inline-block;
+    line-height: 1;
+    padding: .5em 0;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: $text-color;
+    }
+
+    @media (min-width: $on-palm) {
+      font-size: 1rem;
+    }
+  }
+  a[rel='home'] {
+    display: none;
+
+    @media (min-width: $on-palm) {
+      display: inline-block;
+    }
+  }
+  a.active {
+    border-bottom: medium solid rgba($text-color, .75);
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+  }
+  li + li a {
+    margin-left: .5em;
+
+    @media (min-width: $on-laptop) {
+      margin-left: 1em;
+    }
+  }
+}

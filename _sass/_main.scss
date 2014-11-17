@@ -1,0 +1,44 @@
+// _main.scss
+
+.main {
+  position: relative;
+  text-align: center;
+
+  .lyric--big {
+    text-align: left;
+  }
+
+  @media (min-width: $on-palm) {
+    height: 100%;
+  }
+}
+.main__toggler {
+  background: rgba($text-color, .5);
+  color: $background-color;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $small-font-size;
+  font-weight: 700;
+  padding: .25rem .5rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+
+  &:focus,
+  &:hover {
+    background: $text-color;
+  }
+
+  @media (min-width: $on-palm) {
+    font-size: 100%;
+    padding: .5rem .75rem;
+  }
+}
+
+.main__content {
+  @media (min-width: $on-palm) {
+    height: 100%;
+  }
+}
